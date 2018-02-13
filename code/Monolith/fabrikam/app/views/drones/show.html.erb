@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>State:</strong>
+  <%= @drone.state %>
+</p>
+
+<p>
+  <strong>Has load:</strong>
+  <%= @drone.has_load %>
+</p>
+
+<%= link_to 'Edit', edit_drone_path(@drone) %> |
+<%= link_to 'Back', drones_path %>

@@ -1,0 +1,22 @@
+<%= form_with(model: fright, local: true) do |form| %>
+  <% if fright.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(fright.errors.count, "error") %> prohibited this fright from being saved:</h2>
+
+      <ul>
+      <% fright.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :fright_name %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

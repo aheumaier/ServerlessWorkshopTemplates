@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Drones</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>State</th>
+      <th>Has load</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @drones.each do |drone| %>
+      <tr>
+        <td><%= drone.state %></td>
+        <td><%= drone.has_load %></td>
+        <td><%= link_to 'Show', drone %></td>
+        <td><%= link_to 'Edit', edit_drone_path(drone) %></td>
+        <td><%= link_to 'Destroy', drone, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Drone', new_drone_path %>
