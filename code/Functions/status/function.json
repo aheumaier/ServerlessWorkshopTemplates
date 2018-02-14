@@ -1,0 +1,28 @@
+{
+  "bindings": [
+    {
+      "authLevel": "anonymous",
+      "name": "req",
+      "type": "httpTrigger",
+      "direction": "in",
+      "methods": [
+        "get",
+        "post"
+      ]
+    },
+    {
+      "name": "$return",
+      "type": "http",
+      "direction": "out"
+    },
+    {
+      "type": "table",
+      "name": "statusTable",
+      "tableName": "status",
+      "take": 50,
+      "connection": "backdrone_STORAGE",
+      "direction": "in"
+    }
+  ],
+  "disabled": false
+}

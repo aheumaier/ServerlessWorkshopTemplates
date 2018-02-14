@@ -1,0 +1,30 @@
+{
+  "bindings": [
+    {
+      "authLevel": "anonymous",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req"
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "type": "queue",
+      "name": "requestQ",
+      "queueName": "request",
+      "connection": "backdrone_STORAGE",
+      "direction": "out"
+    },
+    {
+      "type": "table",
+      "name": "statusTable",
+      "tableName": "status",
+      "connection": "backdrone_STORAGE",
+      "direction": "out"
+    }
+  ],
+  "disabled": false
+}

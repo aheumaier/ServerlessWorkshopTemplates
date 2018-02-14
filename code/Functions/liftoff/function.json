@@ -1,0 +1,26 @@
+{
+  "bindings": [
+    {
+      "name": "readyToFly",
+      "type": "queueTrigger",
+      "direction": "in",
+      "queueName": "ready",
+      "connection": "backdrone_STORAGE"
+    },
+    {
+      "type": "table",
+      "name": "statusTable",
+      "tableName": "status",
+      "connection": "backdrone_STORAGE",
+      "direction": "out"
+    },
+    {
+      "type": "table",
+      "name": "nextTable",
+      "tableName": "flights",
+      "connection": "backdrone_STORAGE",
+      "direction": "out"
+    }
+  ],
+  "disabled": false
+}

@@ -1,0 +1,27 @@
+{
+  "bindings": [
+    {
+      "authLevel": "anonymous",
+      "name": "req",
+      "type": "httpTrigger",
+      "direction": "in",
+      "methods": [
+        "get",
+        "post"
+      ]
+    },
+    {
+      "name": "$return",
+      "type": "http",
+      "direction": "out"
+    },
+    {
+      "type": "table",
+      "name": "flights",
+      "tableName": "FlightRegistrations",
+      "connection": "backdrone_STORAGE",
+      "direction": "out"
+    }
+  ],
+  "disabled": false
+}

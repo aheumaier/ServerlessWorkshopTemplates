@@ -1,0 +1,50 @@
+{
+  "bindings": [
+    {
+      "type": "table",
+      "name": "nextTable",
+      "tableName": "flights",
+      "take": 50,
+      "connection": "backdrone_STORAGE",
+      "direction": "in"
+    },
+    {
+      "type": "table",
+      "name": "statusTable",
+      "tableName": "status",
+      "connection": "backdrone_STORAGE",
+      "direction": "out"
+    },
+    {
+      "type": "queue",
+      "name": "pickupQueue",
+      "queueName": "pickup",
+      "connection": "backdrone_STORAGE",
+      "direction": "out"
+    },
+    {
+      "type": "queue",
+      "name": "deliveryQueue",
+      "queueName": "deliveryQueue",
+      "connection": "backdrone_STORAGE",
+      "direction": "out"
+    },
+    {
+      "type": "queue",
+      "name": "returnQueue",
+      "queueName": "return",
+      "connection": "backdrone_STORAGE",
+      "direction": "out"
+    },
+    {
+      "type": "httpTrigger",
+      "name": "req",
+      "authLevel": "anonymous",
+      "methods": [
+        "get"
+      ],
+      "direction": "in"
+    }
+  ],
+  "disabled": false
+}

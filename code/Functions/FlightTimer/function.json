@@ -1,0 +1,26 @@
+{
+  "bindings": [
+    {
+      "name": "schedule",
+      "type": "timerTrigger",
+      "direction": "in",
+      "schedule": "*/30 * * * * *"
+    },
+    {
+      "type": "table",
+      "name": "flights",
+      "tableName": "FlightRegistry",
+      "take": 50,
+      "connection": "backdrone_STORAGE",
+      "direction": "in"
+    },
+    {
+      "type": "table",
+      "name": "newFlights",
+      "tableName": "FlightRegistry",
+      "connection": "backdrone_STORAGE",
+      "direction": "out"
+    }
+  ],
+  "disabled": true
+}

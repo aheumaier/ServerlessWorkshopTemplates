@@ -1,0 +1,19 @@
+{
+  "bindings": [
+    {
+      "name": "pickupItem",
+      "type": "queueTrigger",
+      "direction": "in",
+      "queueName": "pickup",
+      "connection": "backdrone_STORAGE"
+    },
+    {
+      "type": "queue",
+      "name": "readyQueue",
+      "queueName": "ready",
+      "connection": "backdrone_STORAGE",
+      "direction": "out"
+    }
+  ],
+  "disabled": false
+}
