@@ -22,6 +22,9 @@
   </div>
 
    <%= fields_for :drones do |drone| %>
+
+   <%= drone.collection_select(:drone_id, Drone.all, :id) %>
+
     <div class="field">
       <%= drone.label :id, 'drone_id' %>
       <%= drone.text_field :id %>
